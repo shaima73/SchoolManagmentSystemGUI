@@ -16,13 +16,13 @@ public class AddStudentFrame extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // إنشاء الحقول والأزرار
+       
         idField = new JTextField(16);
         nameField = new JTextField(20);
         passwordField = new JPasswordField(20);
         addButton = new JButton("Add Student");
 
-        // ترتيب العناصر في اللوحة
+     
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         panel.add(new JLabel("Student ID (14 digits):"));
@@ -35,7 +35,7 @@ public class AddStudentFrame extends JFrame {
 
         add(panel);
 
-        // إضافة مستمع الحدث للزر
+      
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -43,7 +43,7 @@ public class AddStudentFrame extends JFrame {
                 String name = nameField.getText().trim();
                 String password = new String(passwordField.getPassword());
 
-                // التحقق من صحة الإدخال قبل إضافة الطالب
+                
                 if (id.matches("\\d{14}") && name.matches("[a-zA-Z ]+") && !password.isEmpty()) {
                     JavaApplication2.addStudent(id, name, password);
                     JOptionPane.showMessageDialog(AddStudentFrame.this, "Student added successfully!");
