@@ -16,12 +16,12 @@ public class EnrollCourseFrame extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // إنشاء الحقول والأزرار
+       
         studentIdField=new JTextField(16);
-        courseComboBox = new JComboBox<>(JavaApplication2.courses);  // قائمة بالكورسات المتاحة
+        courseComboBox = new JComboBox<>(JavaApplication2.courses);  
         enrollButton = new JButton("Enroll in Course");
 
-        // ترتيب العناصر في اللوحة
+       
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         panel.add(new JLabel("Student ID (14 digits):"));
@@ -32,7 +32,7 @@ public class EnrollCourseFrame extends JFrame {
 
         add(panel);
 
-        // إضافة مستمع الحدث للزر
+        
         enrollButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
