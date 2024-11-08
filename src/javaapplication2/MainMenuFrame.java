@@ -59,7 +59,7 @@ public class MainMenuFrame extends JFrame {
         removeCourseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new DeletStudentFrame().setVisible(true);  // استدعاء نافذة حذف الطالب
+                new DeletStudentFrame().setVisible(true);  
             }
         });
 
