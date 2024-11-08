@@ -14,11 +14,11 @@ public class DeletStudentFrame extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // إنشاء الحقول والأزرار
+       
         idField = new JTextField(20);
         deleteButton = new JButton("Delete Student");
 
-        // ترتيب العناصر في اللوحة
+        
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         panel.add(new JLabel("Student ID (14 digits):"));
@@ -27,13 +27,13 @@ public class DeletStudentFrame extends JFrame {
 
         add(panel);
 
-        // إضافة مستمع الحدث للزر
+      
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String studentId = idField.getText().trim();
 
-                // استدعاء الدالة لحذف الطالب
+               
                 boolean deleted = JavaApplication2.deleteStudent(studentId);
                 if (deleted) {
                     JOptionPane.showMessageDialog(DeletStudentFrame.this, "Student deleted successfully!");
